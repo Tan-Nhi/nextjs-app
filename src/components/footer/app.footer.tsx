@@ -1,5 +1,5 @@
 'use client';
-import { useHasMounted } from '@/untils/customHook';
+import { useHasMounted } from '@/utils/customHook';
 import { AppBar, Container, Toolbar } from '@mui/material';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
@@ -13,8 +13,7 @@ const AppFooter = () => {
             <AppBar position="fixed" sx={{ top: 'auto', bottom: 0, background: "#f2f2f2" }}>
                 <Container sx={{ display: 'flex', gap: 10 }}>
                     <AudioPlayer
-                        autoPlay
-                        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
+                        src={`${process.env.NEXT_PUBLIC_BACKEND_URL}/tracks/hoidanit.mp3`}
                         volume={0.5}
                         onPlay={e => console.log("onPlay")}
                         style={{ boxShadow: 'unset', background: '#f2f2f2' }}

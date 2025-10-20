@@ -1,6 +1,7 @@
 
 
 const PlaylistPage = () => {
+    console.log('check backend: ', process.env.BACKEND_URL);
     return (
         <>
 
