@@ -1,4 +1,6 @@
 'use client'
+import WaveTrack from '@/components/track/wave.track'
+import { Container } from '@mui/material'
 import { useSearchParams } from 'next/navigation'
 
 
@@ -6,14 +8,13 @@ const DetailTrack = (props: any) => {
     const { params } = props
 
     const searchParams = useSearchParams()
-
     const search = searchParams.get('audio')
 
 
     return (
-        <>
-            <div>Detail TrackPage</div>
-        </>
+        <Container>
+            <div> <WaveTrack /></div>
+        </Container>
     )
 }
 export default DetailTrack
